@@ -1,40 +1,121 @@
 # QuantSense
 
-QuantSense is an Agentic Financial Intelligence System built for the IIT Kharagpur RAG & Agentic AI Hackathon.
+Agentic Financial Intelligence Platform built for IIT KGP Arch Hackathon 2026.
+
+## Live Demo
+
+https://quantsense-rag-9aomprxaxh2appphvvh8bzg.streamlit.app
+
+## GitHub Repository
+
+https://github.com/Aritra0401/quantsense-rag
+
+---
+
+## Problem Statement
+
+Financial reports, earnings transcripts, and filings contain large amounts of unstructured information.
+
+Analysts spend significant time searching documents, validating information, and avoiding hallucinated answers from LLMs.
+
+QuantSense provides an agentic RAG pipeline that retrieves, verifies, and synthesizes financial information from company documents.
 
 ## Features
 
-* Hybrid Retrieval (BM25 + Dense Retrieval)
-* HyDE Query Expansion
-* CRAG Self-Correction
-* Financial Guardrails
-* Confidence Scoring
-* Management Tone Drift Detection
-* Streamlit Interface
-* RAG Evaluation Pipeline
+- Hybrid Retrieval (BM25 + ChromaDB)
+- HyDE Query Expansion
+- Reciprocal Rank Fusion (RRF)
+- Cross Encoder Reranking
+- CRAG Self Correction
+- Hallucination Detection
+- Financial Intelligence Assistant
+- Management Tone Drift Analysis
+- Streamlit Web Interface
+
+## Architecture
+
+User Query
+    ↓
+HyDE Query Expansion
+    ↓
+BM25 Retrieval + ChromaDB Retrieval
+    ↓
+Reciprocal Rank Fusion
+    ↓
+Cross Encoder Reranking
+    ↓
+CRAG Verification
+    ↓
+Hallucination Guard
+    ↓
+LLM Response
+
 
 ## Tech Stack
 
-* Python
-* LangGraph
-* ChromaDB
-* Sentence Transformers
-* Groq LLM
-* Streamlit
+- Python
+- Streamlit
+- ChromaDB
+- BM25
+- Sentence Transformers
+- LangGraph
+- Groq
+- Tavily Search
+- Docker
 
-## Running Locally
-
-```bash
-pip install -r requirements.txt
-streamlit run app/streamlit_app.py
-```
 
 ## Project Structure
 
-* `src/agent` – LangGraph workflow
-* `src/retrieval` – Retrieval and HyDE
-* `src/guardrails` – Hallucination and citation checks
-* `src/features` – Confidence scoring and FinSentinel
-* `app` – Streamlit UI
+src/
+├── agent/
+├── ingestion/
+├── retrieval/
+├── features/
+├── guardrails/
 
-Built for IIT KGP Arch Hackathon 2026.
+data/
+├── raw/
+├── processed/
+
+app/
+└── streamlit_app.py
+
+## Local Setup
+
+1. Clone repository
+
+git clone https://github.com/Aritra0401/quantsense-rag.git
+
+2. Create virtual environment
+
+python -m venv venv
+
+3. Install requirements
+
+pip install -r requirements.txt
+
+4. Create .env
+
+GROQ_API_KEY=YOUR_KEY
+TAVILY_API_KEY=YOUR_KEY
+
+5. Run application
+
+streamlit run app/streamlit_app.py
+
+
+## Example Queries
+
+- What is Apple's P/E ratio?
+- Summarize Infosys FY2026 annual report.
+- Compare Apple and JPMorgan valuation.
+- What were the major risks highlighted in recent filings?
+
+## Hackathon Submission
+
+IIT KGP Arch Hackathon 2026
+
+Submission Includes:
+- Production Code (GitHub)
+- Live Demo (Streamlit Cloud)
+- Architecture & Case Study PPT
