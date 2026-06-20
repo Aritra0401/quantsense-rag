@@ -1,0 +1,44 @@
+# Core RAG & LLM
+langchain
+langchain-groq
+langchain-community
+langgraph
+groq
+
+# Embeddings & Vector DB
+sentence-transformers
+chromadb
+rank_bm25
+
+# Re-ranking
+FlagEmbedding
+
+# PDF processing
+pypdf
+pdfplumber
+unstructured
+
+# Finance data
+yfinance
+pandas
+numpy
+scipy
+requests
+
+# Evaluation
+ragas
+datasets
+
+# UI
+streamlit
+plotly
+
+# Utils
+python-dotenv
+tavily-python
+transformers
+torch
+redis
+loguru
+
+# Python 3.13 already includes asyncio

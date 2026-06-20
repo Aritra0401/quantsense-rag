@@ -216,3 +216,14 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# QuantSense
+.chroma/
+data/raw/
+data/processed/bm25_index.pkl
+
+*.html
+*.pdf
+
+search_debug.py
+test_agent.py
+packages_backup.txt
